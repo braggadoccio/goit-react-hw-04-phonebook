@@ -3,7 +3,7 @@ import { nanoid } from 'nanoid';
 import css from './ContactForm.module.css';
 import PropTypes from 'prop-types';
 
-export const ContactForm = ({ addContacts, contacts }) => {
+export const ContactForm = ({ addContact, contacts }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
@@ -30,7 +30,7 @@ export const ContactForm = ({ addContacts, contacts }) => {
       return;
     }
 
-    addContacts({
+    addContact({
       id: nanoid(),
       name: name.trim(),
       number: number.trim(),
